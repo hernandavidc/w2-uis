@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vuejs</title>
+    <title>Intro Vuejs</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <script src="components/message.js"></script>
     <script src="components/computed-prop.js"></script>
     <script src="components/methods.js"></script>
+    <script src="components/vmodel.js"></script>
+    <script src="components/vmodel-array.js"></script>
+    <script src="components/emitevent.js"></script>
+    <script src="components/parent-data.js"></script>
+    <script src="components/child-data.js"></script>
+    <script src="components/child-methods.js"></script>
+    <script src="components/ciclos.js"></script>
+    <script src="components/condicional.js"></script>
 </head>
 <body>
     
     <div id="app">
-        <!-- <h2>Componente message</h2>
-        <message></message> -->
+        <h2>Componente message</h2>
+        <message></message>
 
         <computed-prop></computed-prop>
         <methods></methods>
+        <vmodel></vmodel>
+        <vmodel-array></vmodel-array>
+        <emitevent @show_car_brand="alertShowCarBrand"></emitevent>
+        <parent-data></parent-data>
+        <child-data ref="childData"></child-data>
+        <child-methods ref="childMethods"></child-methods>
+        <ciclos></ciclos>
+        <condicional></condicional>
     </div>
 
     <script>
         new Vue({
             el: '#app',
+            data(){
+                return {
+                    appName: 'Intro de Vuejs'
+                }
+            },
+            mounted(){
+                let valueRef = this.$refs.childData.componentName;
+                console.log(this);
+
+                console.log("Vuejs instanse id mounted");
+                console.log("Ref: childDate: ", valueRef);
+
+                setTimeout(() => {
+                    this.$refs.childMethods.showCmpValue();
+                }, 3000)
+            },
+            methods: {
+                alertShowCarBrand(carBrand, valor2){
+                    alert(carBrand + " " + valor2);
+                }
+            }
         })
     </script>
 </body>
