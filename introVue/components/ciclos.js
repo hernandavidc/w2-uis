@@ -17,7 +17,9 @@ Vue.component('ciclos', {
                     v-for="(producto, indexProd) in prodDisp"
                     :key="'prod'+indexProd"
                     class="class-list"
-                > {{indexProd}} | {{ producto.name }} </li>
+                > 
+                    Index: {{indexProd}} | Id: {{ producto.id }} | {{ producto.name }} 
+                </li>
             </ul>
         </div>
     `

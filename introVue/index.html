@@ -15,6 +15,8 @@
     <script src="components/child-methods.js"></script>
     <script src="components/ciclos.js"></script>
     <script src="components/condicional.js"></script>
+    <script src="components/slots.js"></script>
+    <script src="components/watchers.js"></script>
 </head>
 <body>
     
@@ -32,6 +34,16 @@
         <child-methods ref="childMethods"></child-methods>
         <ciclos></ciclos>
         <condicional></condicional>
+        <slots>
+            <p> Contenido del slot sin nombre </p>
+            <template slot="header">
+                <h3> Slot name header </h3>
+            </template>
+            <template slot="footer">
+                <h5> Slot name footer </h5>
+            </template>
+        </slots>
+        <watchers></watchers>
     </div>
 
     <script>
