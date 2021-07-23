@@ -3,3 +3,8 @@ https://medium.com/@LondonAppBrewery/how-to-download-install-mongodb-on-windows-
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 https://expressjs.com/es/starter/installing.html
 
+https://developer.mozilla.org/es/docs/Web/API/Fetch_API
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+https://randomuser.me/api/
+
+https://dev.to/marwan01/deploy-a-vue-js-app-to-heroku-30m
