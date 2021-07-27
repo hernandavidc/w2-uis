@@ -8,3 +8,6 @@ donde el estado contiene una variable tipo array llamada 'cart', sus mutaciones 
 mi lista 'Cart' se debe es incrementar su cantidad en 1 y no agregarlo de nuevo) 
 y 'removeProductFromCart' (el cual elimina el producto por completo, así tenga mas de 1 cantidad); 
 y sus getter contiene 'totalCost' que me devuelve el valor total.
+
+Y finalmente crear un componente de carrito que me permita listar todos los items que este contiene y su total.
+Datos de la tabala carrito ['name', 'qty', 'price', 'actions']
