@@ -1,3 +1,5 @@
+
+
 Se requiere complementar el codigo de ecommerce de tal forma que ahora cuenta con un Layout, donde se tenga el listado de 
 columnas en la seccion izquierda de la pantalla la cual debe ocupar 9 columnas y en la sección derecha un espacio para tener 
 el carrito, el cual debe ocupar 3 columnas de la grilla. 
