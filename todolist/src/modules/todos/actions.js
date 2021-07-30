@@ -35,7 +35,7 @@ export async function updateTodo({ commit }, todo){
     });
 }
 
-export async function deleteTodo({ commit }, todo){
+export async function deleteTodo({ commit, dispatch }, todo){
     await Vue.axios.delete(`/todos/${ todo.id }`)
         .catch(function (error) {
             commit('todosError', error.message);
