@@ -1,3 +1,19 @@
 {
-    "todos": []
+  "todos": [
+    {
+      "id": 1,
+      "text": "Hacer el sprint 2",
+      "done": false
+    },
+    {
+      "id": 2,
+      "text": "Almorzar",
+      "done": true
+    },
+    {
+      "id": 1627691094457,
+      "text": "Crear modulo de auth",
+      "done": false
+    }
+  ]
 }
