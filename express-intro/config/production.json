@@ -1,0 +1,7 @@
+{
+    "dbConfig": {
+        "host": "production-url",
+        "port": 1234,
+        "dbName": "customers"
+    }
+}
