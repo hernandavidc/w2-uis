@@ -2,7 +2,7 @@
     "dbConfig": {
         "host": "mongodb://localhost",
         "port": ":27017",
-        "dbName": "/customers"
+        "dbName": "/auth"
     },
     "SECRETORPRIVATEKEY": "MiLlaveSecreta",
     "PORT": 3000
