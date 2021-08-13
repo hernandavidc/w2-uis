@@ -2,7 +2,8 @@
 const { Router } = require('express');
 const { check } = require('express-validator');
 
-const { validateData } = require('../middlewares/validate-data');
+const { validateData, validateJWT, haveRol } = require('../middlewares');
+
 const { emailExists, rolExists, userIdExists } = require('../helpers/req-validators');
 
 const { usuariosGet,
@@ -23,6 +24,8 @@ router.put('/:id', [
 ], usuariosPut );
 
 router.post('/', [
+    validateJWT,
+    haveRol('Admin', 'Seller'),
     check('name', 'El nombre es obligatorio').not().isEmpty(),
     check('email', 'El correo no es valido').isEmail(),
     check('email').custom( emailExists ),
@@ -32,6 +35,8 @@ router.post('/', [
 ], usuariosPost );
 
 router.delete('/:id', [
+    validateJWT,
+    haveRol('Admin'),
     check('id', 'El id no es vaido').isMongoId(),
     check('id').custom( userIdExists ),
     validateData
